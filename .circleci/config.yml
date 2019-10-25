@@ -3,11 +3,16 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:12.10.0
+# jobs:
+# build:
+#   docker:
+# specify the version you desire here
+# - image: circleci/node:12.10.0
+deployment:
+  dockerhub:
+    branch: master
+    commands:
+      - $DOCKER_HUB
 
     working_directory: ~/repo
 
