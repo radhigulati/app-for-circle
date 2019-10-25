@@ -10,7 +10,7 @@ jobs:
     deployment:
       #environment:
       dockerhub:
-        branch: master
+        branch: livetest
         commands: -$DOCKER_HUB_TRIGGER
     # deployment:
     #   dockerhub:
