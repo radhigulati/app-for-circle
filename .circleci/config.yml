@@ -6,8 +6,17 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:12.10.0
+    deployment:
+      #environment:
+      dockerhub:
+        branch: master
+        commands: -$DOCKER_HUB_TRIGGER
+    # deployment:
+    #   dockerhub:
+    #     branch: master
+    #     commands:
+    #       - $DOCKER_HUB
 
     working_directory: ~/repo
 
