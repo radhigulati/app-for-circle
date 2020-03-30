@@ -7,3 +7,5 @@ function sub(a, b) {
 }
 
 module.exports = sum;
+module.exports = sub;
+
