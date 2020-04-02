@@ -8,6 +8,10 @@ jobs:
       dockerhub:
         branch: livetest
         commands: -$DOCKER_HUB_TRIGGER
+  second_job:
+    script: "echo Hello, Radhika!"
+    - hold: # <<< A job that will require manual approval in the CircleCI web application.
+          type: approval
 
     working_directory: ~/repo
 
