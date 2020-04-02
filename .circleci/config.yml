@@ -10,8 +10,8 @@ jobs:
         commands: -$DOCKER_HUB_TRIGGER
   second_job:
     - run: echo "hello world"
-      - hold: # <<< A job that will require manual approval in the CircleCI web application.
-            type: approval
+    - hold:
+          type: approval
 
     working_directory: ~/repo
 
