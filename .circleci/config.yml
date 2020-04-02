@@ -9,10 +9,13 @@ jobs:
         branch: livetest
         commands: -$DOCKER_HUB_TRIGGER
   second_job:
-    - run: 
-        command: echo "hello world"
-    - hold:
-          type: approval
+   docker:
+      - image: circleci/node:12.10.0
+    deployment:
+      #environment:
+      dockerhub:
+        branch: livetest
+        commands: -$DOCKER_HUB_TRIGGER
 
     working_directory: ~/repo
 
