@@ -9,7 +9,8 @@ jobs:
         branch: livetest
         commands: -$DOCKER_HUB_TRIGGER
   second_job:
-    - run: echo "hello world"
+    - run: 
+        command: echo "hello world"
     - hold:
           type: approval
 
