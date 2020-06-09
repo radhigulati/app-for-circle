@@ -6,6 +6,10 @@
   "scripts": {
     "test": "jest"
   },
+  "keywords": [
+    "testing",
+    "test"
+  ],
   "author": "Radhika",
   "license": "ISC",
   "devDependencies": {
